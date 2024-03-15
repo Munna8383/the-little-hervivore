@@ -1,0 +1,63 @@
+[
+    {
+      "recipe_id": 1,
+      "recipe_name": "Grilled Salmon",
+      "short_description": "A healthy and delicious grilled salmon dish served with tender asparagus spears.",
+      "ingredients_number":5,
+      "ingredients": ["4 salmon fillets", "1 bunch of asparagus", "2 tbsp olive oil", "1 lemon", "Salt and pepper to taste"],
+      "preparing_time": 25,
+      "calories": 350,
+      "recipe_image": "https://i.ibb.co/cCzjXGm/1.jpg"
+    },
+    {
+      "recipe_id": 2,
+      "recipe_name": "Vegetable Stir-Fry",
+      "short_description": "A quick and flavorful vegetable stir-fry packed with colorful veggies and served with rice.",
+      "ingredients_number":4,
+      "ingredients": ["2 cups broccoli florets", "1 red bell pepper", "1 yellow bell pepper"],
+      "preparing_time": 20,
+      "calories": 250,
+      "recipe_image": "https://i.ibb.co/HH0D5Hx/2.jpg"
+    },
+    {
+      "recipe_id": 3,
+      "recipe_name": "Caprese Salad",
+      "short_description": "A simple and refreshing Italian salad made with ripe tomatoes, fresh mozzarella, and basil leaves.",
+      "ingredients_number":5,
+      "ingredients": ["2 large tomatoes", "200g fresh mozzarella cheese", "1 bunch fresh basil leaves", "2 tbsp balsamic vinegar", "2 tbsp olive oil"],
+      "preparing_time": 15,
+      "calories": 200,
+      "recipe_image": "https://i.ibb.co/M2g0xLS/3.jpg"
+    },
+    {
+      "recipe_id": 4,
+      "recipe_name": "Chicken Parmesan",
+      "short_description": "Classic Italian-American dish featuring breaded chicken breasts topped with marinara sauce and melted cheese.",
+      "ingredients_number":4,
+      "ingredients": ["4 boneless, skinless chicken breasts", "1 cup breadcrumbs", "1 cup marinara sauce"],
+      "preparing_time": 40,
+      "calories": 400,
+      "recipe_image": "https://i.ibb.co/DkT7Qhf/par.jpg"
+    },
+    {
+      "recipe_id": 5,
+      "recipe_name": "Quinoa Salad",
+      "short_description": "A protein-packed salad featuring quinoa, chickpeas, fresh vegetables, and a zesty lemon dressing.",
+      "ingredients_number":5,
+      "ingredients": ["1 cup quinoa", "1 can chickpeas (drained and rinsed)", "1 cucumber (diced)", "1 red onion (finely chopped)", "1/4 cup chopped parsley"],
+      "preparing_time": 30,
+      "calories": 320,
+      "recipe_image": "https://i.ibb.co/0FTT63q/5.jpg"
+    },
+    {
+      "recipe_id": 6,
+      "recipe_name": "Beef Tacos with Nan",
+      "short_description": "Classic Mexican street food made with seasoned ground beef, fresh toppings, and soft tortillas.",
+      "ingredients_number":3,
+      "ingredients": ["500g ground beef", "1 packet taco seasoning", "1 cup shredded lettuce", "1 cup diced tomatoes", "1/2 cup shredded cheddar cheese", "1/4 cup chopped cilantro", "8 soft tortillas"],
+      "preparing_time": 35,
+      "calories": 380,
+      "recipe_image": "https://i.ibb.co/Gc4K4gZ/6.jpg"
+    }
+  ]
+  
