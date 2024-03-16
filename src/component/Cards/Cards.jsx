@@ -28,6 +28,10 @@ const Cards = ({card,handleWantToCook}) => {
                 <GoDotFill></GoDotFill>
                 <p className="text-[#878787]">{ingredients[2]}</p>
             </div>
+            <div className="flex">
+                <GoDotFill></GoDotFill>
+                <p className="text-[#878787]">{ingredients[3]}</p>
+            </div>
             
         
         

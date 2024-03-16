@@ -142,6 +142,7 @@ function App() {
   </table>
 
   <div className='flex justify-center gap-6'>
+    <hr className='mt-3' />
     <h1 className='text-lg font-bold'>Total Time: {cooking.reduce((p,c)=>p+c.preparing_time,0)} </h1>
     <h2 className='text-lg font-bold'>Total calorie: {cooking.reduce((p,c)=>p+c.calories,0)}</h2>
   </div>
