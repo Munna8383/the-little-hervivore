@@ -17,6 +17,7 @@ function App() {
 
   const [cards,setCards]=useState([])
   const [cook,setCook] = useState([])
+  const [cooking,setCooking]= useState([])
 
   useEffect(()=>{
     fetch("cook.json")
@@ -30,6 +31,9 @@ function App() {
 
     if(!isExist){
       setCook([...cook,card])
+      toast.success("Added !", {
+        position: "top-center"
+      });
     }
     else{
       toast.warn("Already added !", {
@@ -37,6 +41,17 @@ function App() {
       });
     }
 
+
+  }
+
+  const handlePreparing =(id)=>{
+    const remainCook = cook.filter(item=>item.recipe_id!=id)
+    setCook(remainCook);
+    toast.success("Cooking !", {
+      position: "top-center"
+    });
+    const findCooking =  cook.find(item=>item.recipe_id==id);
+    setCooking([...cooking,findCooking])
 
   }
  
@@ -66,13 +81,14 @@ function App() {
   <hr className='mt-5' />
 </div>
 
- <div className='grid grid-cols-4 gap-5 text-center text-xl text-[#878787] space-x-7'>
+
+ <div className='grid grid-cols-4 gap-5 text-center text-xl text-[#878787] space-x-2'>
   <h1>Name</h1>
   <h1>Time</h1>
   <h1>Calories</h1>
- </div>
+ </div> 
 
- {
+{
   cook.map((item,index)=>(
     <div key={item.recipe_id} className=' grid grid-cols-4 gap-5 text-center space-y-4 text-[#878787] text-base font-semibold'>
      <div>
@@ -85,16 +101,50 @@ function App() {
       <h2>{item.calories}</h2>
       </div>
       <div>
-        <button  className="px-4 py-2 bg-[#35f3a3] rounded-2xl font-semibold text-black">preparing</button>
+        <button onClick={()=>handlePreparing(item.recipe_id)} className="px-4 py-2 bg-[#35f3a3] rounded-2xl font-semibold text-black">preparing</button>
       </div>
     </div>
   ))
  }
 
 <div  className='text-center text-3xl font-bold py-5'>
-  <h1>Currently Cooking</h1>
+  <h1>Currently Cooking: {cooking.length}</h1>
   <hr className='mt-6' />
 </div>
+
+<table className="table text-base font-semibold">
+
+    <thead >
+      <tr className='text-xl text-[#878787] '>
+        <th></th>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Calories</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {
+        cooking.map((item,index)=>(
+
+          // eslint-disable-next-line react/jsx-key
+          <tr className='bg-gray-100 py-3 px-1 rounded-xl'>
+        <th>{index+1}</th>
+        <td>{item.recipe_name}</td>
+        <td>{item.preparing_time}</td>
+        <td>{item.calories}</td>
+      </tr>
+
+        ))
+      }
+ 
+    </tbody>
+  </table>
+
+  <div className='flex justify-center gap-6'>
+    <h1 className='text-lg font-bold'>Total Time: {cooking.reduce((p,c)=>p+c.preparing_time,0)} </h1>
+    <h2 className='text-lg font-bold'>Total calorie: {cooking.reduce((p,c)=>p+c.calories,0)}</h2>
+  </div>
 
 </div>
 
