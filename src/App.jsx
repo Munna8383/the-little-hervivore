@@ -128,7 +128,7 @@ function App() {
         cooking.map((item,index)=>(
 
           // eslint-disable-next-line react/jsx-key
-          <tr className='bg-gray-100 py-3 px-1 rounded-xl'>
+          <tr key={index} className='bg-gray-100 py-3 px-1 rounded-xl'>
         <th>{index+1}</th>
         <td>{item.recipe_name}</td>
         <td>{item.preparing_time}</td>
@@ -141,9 +141,9 @@ function App() {
     </tbody>
   </table>
 
-  <div className='flex justify-center gap-6'>
+  <div className='flex justify-center gap-4'>
     <hr className='mt-3' />
-    <h1 className='text-lg font-bold'>Total Time: {cooking.reduce((p,c)=>p+c.preparing_time,0)} </h1>
+    <h1 className='text-lg font-bold'>Total Time: {cooking.reduce((p,c)=>p+c.preparing_time,0)} min</h1>
     <h2 className='text-lg font-bold'>Total calorie: {cooking.reduce((p,c)=>p+c.calories,0)}</h2>
   </div>
 

@@ -1,6 +1,7 @@
 import { GoDotFill } from "react-icons/go";
 import { IoIosTime } from "react-icons/io";
 import { GiEmbrassedEnergy } from "react-icons/gi";
+import PropTypes from "prop-types";
 
 const Cards = ({card,handleWantToCook}) => {
     const {recipe_name,recipe_image,short_description,ingredients_number,ingredients,preparing_time,calories} = card;
@@ -55,5 +56,9 @@ const Cards = ({card,handleWantToCook}) => {
     </div>
     );
 };
+Cards.propTypes ={
+    card: PropTypes.object,
+    handleWantToCook: PropTypes.func
+}
 
 export default Cards;
