@@ -76,13 +76,13 @@ function App() {
 </div>
 
 <div className='w-1/3 space-y-3'>
-<div className='text-center text-3xl font-bold mb-6'>
+<div className='text-center text-3xl font-extrabold mb-6'>
   <h1>Want To Cook:{cook.length}</h1>
   <hr className='mt-5' />
 </div>
 
 
- <div className='grid grid-cols-4 gap-5 text-center text-xl text-[#878787] space-x-2'>
+ <div className='grid grid-cols-4 gap-5 text-center text-xl font-semibold text-[#878787]'>
   <h1>Name</h1>
   <h1>Time</h1>
   <h1>Calories</h1>
@@ -92,7 +92,7 @@ function App() {
   cook.map((item,index)=>(
     <div key={item.recipe_id} className=' grid grid-cols-4 gap-5 text-center space-y-4 text-[#878787] text-base font-semibold'>
      <div>
-     <h1><span>{index+1}</span><span>:</span>{item.recipe_name}</h1>
+     <h1><span>{index+1}</span><span>.</span>{item.recipe_name}</h1>
      </div>
      <div>
      <h2>{item.preparing_time}</h2>
@@ -107,8 +107,8 @@ function App() {
   ))
  }
 
-<div  className='text-center text-3xl font-bold py-5'>
-  <h1>Currently Cooking: {cooking.length}</h1>
+<div  className='text-center text-3xl font-extrabold py-5'>
+  <h1>Currently Cooking:{cooking.length}</h1>
   <hr className='mt-6' />
 </div>
 
