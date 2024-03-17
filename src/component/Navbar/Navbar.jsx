@@ -8,11 +8,11 @@ const Navbar = () => {
                 <h1 className="text-2xl lg:text-4xl font-bold">The Little Herbivore</h1>
             </div>
 
-            <div className="hidden lg:flex gap-4">
-                <h1 className="text-2xl font-medium">Home</h1>
-                <h1  className="text-2xl font-medium">Recipe</h1>
-                <h1  className="text-2xl font-medium">About</h1>
-                <h1  className="text-2xl font-medium">Search</h1>
+            <div className="hidden lg:flex gap-4 text-[#150B2BB3]">
+                <h1 className="text-xl font-medium">Home</h1>
+                <h1  className="text-xl font-medium">Recipe</h1>
+                <h1  className="text-xl font-medium">About</h1>
+                <h1  className="text-xl font-medium">Search</h1>
             </div>
 
             <div className=" flex items-center gap-5">

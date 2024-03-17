@@ -15,7 +15,7 @@ const Banner = () => {
 
            <div>
               <div className="text-center space-x-5">
-              <button className="bg-[#35f3a3] px-2 py-1 lg:px-6 lg:py-3 text-sm lg:text-xl font-semibold rounded-2xl">Explore Now</button>
+              <button className="bg-[#35f3a3] px-2 py-1 lg:px-6 lg:py-3 text-sm lg:text-xl font-semibold text-black rounded-2xl">Explore Now</button>
             <button className=" px-6 py-3 text-xl  font-semibold rounded-2xl btn btn-outline text-white">Our Feedback</button>
               </div>
            </div>
